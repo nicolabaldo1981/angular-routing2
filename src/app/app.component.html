@@ -1,0 +1,31 @@
+<nav>
+  <ul>
+    <li>
+      <a
+        appUser
+        routerLink="/home"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Home</a
+      >
+    </li>
+    <li *ngIf="logged">
+      <a
+        routerLink="/contacts"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Contacts</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/info"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Info</a
+      >
+    </li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

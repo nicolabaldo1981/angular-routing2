@@ -1,0 +1,7 @@
+<nav>
+  <div *ngFor="let u of users">
+    <a [routerLink]="['contact', u.id]">{{ u.name }}</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

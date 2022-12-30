@@ -1,0 +1,13 @@
+<ng-container *ngIf="currentUser; else loading">
+  <li>username: {{ currentUser.username }}</li>
+  <li>email: {{ currentUser.email }}</li>
+
+  <div style="margin-top: 10px">
+    Posts:
+    <li *ngFor="let post of currentUser.posts">{{ post.title }}</li>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div>Loading…</div>
+</ng-template>
